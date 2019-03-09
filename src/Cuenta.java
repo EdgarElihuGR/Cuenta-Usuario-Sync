@@ -40,7 +40,7 @@ public class Cuenta {
 
     @Override
     public String toString() {
-        return "Cuenta{" + "limite=" + limite + ", saldo=" + saldo + ", nombre=" + nombre + '}';
+        return "Cuenta{" + "saldo=" + saldo + ", limite=" + limite + ", nombre=" + nombre + '}';
     }
 
     public synchronized void Retirar(int monto, String nombre) {
@@ -95,7 +95,7 @@ public class Cuenta {
         int i = 0;
 
         try {
-            System.out.println("_________________" + nombre + "__________________");
+            System.out.println("_________________" + nombre + " recibiendo transacción__________________");
             System.out.println("Saldo actual: " + saldo + " Saldo a despositar: " + monto);
             int cambioDeposito = 0;
 
@@ -111,7 +111,7 @@ public class Cuenta {
                     System.out.println("Saldo actual: " + saldo);
                     System.out.println("______________________________________________");
                     wait();
-                    //System.out.println("_________________________________________");
+                   
                     System.out.println(nombre + " despues de esperar");
                     System.out.println("Saldo pendiente: " + cambioDeposito);
                     i++;

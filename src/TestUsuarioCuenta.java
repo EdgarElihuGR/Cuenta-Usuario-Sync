@@ -40,9 +40,11 @@ public class TestUsuarioCuenta {
         Usuario usuario10 = new Usuario("Sofia", cuenta10, santander);
 
         //Arreglo de bancos
-        ArrayList<Banco> bancos = new ArrayList<Banco>();
-        bancos.add(bancomer);
-        bancos.add(santander);
+        bancomer.bancos.add(bancomer);
+        bancomer.bancos.add(santander);
+        
+        santander.bancos.add(bancomer);
+        santander.bancos.add(santander);
 
         //Bancos se le agregan las cuentas de los usuarios
         bancomer.cuentas.add(cuenta1);
